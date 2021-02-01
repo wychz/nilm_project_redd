@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a62e43c-097e-454e-92c7-f341a3137cac" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lT5N8E3ZjKr7j5jdgQpkFLfcfu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\nilm\database" />
+      <recent name="D:\Project\nilm\test" />
+      <recent name="D:\Project\nilm\saved_models\lstm_1min\multiple" />
+      <recent name="D:\Project\nilm\data_process\redd\raw_dataset" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\nilm\data_process\redd" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.database_connect">
+    <configuration name="cast" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nilm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="C:/Mine/software/Anaconda/envs/nilmtk_env/Lib/site-packages/pandas/core/dtypes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:/Mine/software/Anaconda/envs/nilmtk_env/Lib/site-packages/pandas/core/dtypes/cast.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="database_connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nilm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database/database_connect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="database_connect_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nilm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database/database_connect_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="database_connect_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nilm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database/database_connect_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nilm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/train_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_model/train_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.database_connect" />
+        <item itemvalue="Python.cast" />
+        <item itemvalue="Python.database_connect_2" />
+        <item itemvalue="Python.database_connect_3" />
+        <item itemvalue="Python.train_main (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a62e43c-097e-454e-92c7-f341a3137cac" name="Default Changelist" comment="" />
+      <created>1607608197653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607608197653</updated>
+      <workItem from="1607608199961" duration="5679000" />
+      <workItem from="1607687120381" duration="3737000" />
+      <workItem from="1607768611699" duration="1159000" />
+      <workItem from="1607775787109" duration="6614000" />
+      <workItem from="1608125044338" duration="11995000" />
+      <workItem from="1608216671245" duration="3921000" />
+      <workItem from="1608223792297" duration="1782000" />
+      <workItem from="1608261356169" duration="976000" />
+      <workItem from="1608357287321" duration="66000" />
+      <workItem from="1608363498021" duration="642000" />
+      <workItem from="1608720197325" duration="1760000" />
+      <workItem from="1608904598509" duration="2464000" />
+      <workItem from="1609486756976" duration="1397000" />
+      <workItem from="1609489185177" duration="817000" />
+      <workItem from="1609745996367" duration="36000" />
+      <workItem from="1609746443735" duration="59000" />
+      <workItem from="1610378866578" duration="1302000" />
+      <workItem from="1610454198374" duration="155000" />
+      <workItem from="1610454375816" duration="2398000" />
+      <workItem from="1610544410245" duration="2656000" />
+      <workItem from="1611765466581" duration="611000" />
+      <workItem from="1611922029844" duration="124000" />
+      <workItem from="1612007683214" duration="13433000" />
+      <workItem from="1612179590315" duration="10759000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1001" y="503" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607787968041">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1001" y="503" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1607787968041" />
+    <state width="1722" height="466" key="DebuggerActiveHint" timestamp="1612185286824">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1722" height="466" key="DebuggerActiveHint/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612185286824" />
+    <state x="1059" y="442" key="FileChooserDialogImpl" timestamp="1611922149625">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1059" y="442" key="FileChooserDialogImpl/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1610454332642" />
+    <state x="1059" y="442" key="FileChooserDialogImpl/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1611922149625" />
+    <state width="2517" height="397" key="GridCell.Tab.0.bottom" timestamp="1612189105687">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="477" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590366" />
+    <state width="2517" height="397" key="GridCell.Tab.0.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189105686" />
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state width="2517" height="397" key="GridCell.Tab.0.center" timestamp="1612189105686">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="477" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590365" />
+    <state width="2517" height="397" key="GridCell.Tab.0.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189105686" />
+    <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state width="2517" height="397" key="GridCell.Tab.0.left" timestamp="1612189105686">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="477" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590365" />
+    <state width="2517" height="397" key="GridCell.Tab.0.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189105686" />
+    <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state width="2517" height="397" key="GridCell.Tab.0.right" timestamp="1612189105686">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="477" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590365" />
+    <state width="2517" height="397" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189105686" />
+    <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state width="2517" height="397" key="GridCell.Tab.1.bottom" timestamp="1612189107978">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="397" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
+    <state width="2517" height="397" key="GridCell.Tab.1.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189107978" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state width="2517" height="397" key="GridCell.Tab.1.center" timestamp="1612189107978">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="397" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
+    <state width="2517" height="397" key="GridCell.Tab.1.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189107978" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state width="2517" height="397" key="GridCell.Tab.1.left" timestamp="1612189107978">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="397" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
+    <state width="2517" height="397" key="GridCell.Tab.1.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189107978" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state width="2517" height="397" key="GridCell.Tab.1.right" timestamp="1612189107978">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="397" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
+    <state width="2517" height="397" key="GridCell.Tab.1.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612189107978" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
+    <state x="781" y="342" key="SettingsEditor" timestamp="1609488812730">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="342" key="SettingsEditor/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609488812730" />
+    <state width="1288" height="708" key="XDebugger.FullValuePopup" timestamp="1607781541934">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1288" height="708" key="XDebugger.FullValuePopup/0.0.2560.1400@0.0.2560.1400" timestamp="1607781541934" />
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1612179612184">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1610454207619" />
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612179612184" />
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1607775788735" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1612185293362">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608222431483" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1612185293362" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/picckletest.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_process/redd/data_to_label.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_process/redd/single_data_generate.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_process/redd/single_data_generate.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_process/redd/multiple_data_generate.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_process/redd/data_output.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/database/database_connect_2.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/database/database_connect_3.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/database/database_connect_3.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="activations.'appliances' (3004062543920).size" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/nilm$database_connect.coverage" NAME="database_connect Coverage Results" MODIFIED="1612189105592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
+    <SUITE FILE_PATH="coverage/nilm$data_main.coverage" NAME="data_main Coverage Results" MODIFIED="1608223959009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_process/redd" />
+    <SUITE FILE_PATH="coverage/nilm$multiple_data_generate.coverage" NAME="multiple_data_generate Coverage Results" MODIFIED="1607612096513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_process/redd" />
+    <SUITE FILE_PATH="coverage/nilm$data_output.coverage" NAME="data_output Coverage Results" MODIFIED="1608906271899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_process/redd" />
+    <SUITE FILE_PATH="coverage/nilm$database_connect_3.coverage" NAME="database_connect_3 Coverage Results" MODIFIED="1612026515171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
+    <SUITE FILE_PATH="coverage/nilm$train_main.coverage" NAME="train_main Coverage Results" MODIFIED="1608129644687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train" />
+    <SUITE FILE_PATH="coverage/nilm$data_to_label.coverage" NAME="data_to_label Coverage Results" MODIFIED="1608224368093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_process/redd" />
+    <SUITE FILE_PATH="coverage/nilm$train_main__1_.coverage" NAME="train_main (1) Coverage Results" MODIFIED="1612008297681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train_model" />
+    <SUITE FILE_PATH="coverage/nilm$picckletest.coverage" NAME="picckletest Coverage Results" MODIFIED="1607781524975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/nilm$test_main.coverage" NAME="test_main Coverage Results" MODIFIED="1608262216450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_model" />
+    <SUITE FILE_PATH="coverage/nilm$cast.coverage" NAME="cast Coverage Results" MODIFIED="1612187539642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Mine/software/Anaconda/envs/nilmtk_env/Lib/site-packages/pandas/core/dtypes" />
+    <SUITE FILE_PATH="coverage/nilm$database_connect_2.coverage" NAME="database_connect_2 Coverage Results" MODIFIED="1612026662110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
+  </component>
+</project>
