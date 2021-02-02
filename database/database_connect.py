@@ -8,12 +8,14 @@ def convert(x):
     return timestamp
 
 
-# 请修改1, 2两处的数据
+# 请修改1, 2, 3, 4两处的数据
 # 1. 数据分别为用户名，密码，ip，port，数据库名
 engine = create_engine("mysql+pymysql://{}:{}@{}:{}/{}".format('root', 'root', 'localhost', '3306', 'energydb'))
 # 2. 要进行数据清洗的电表号码
 meter_list = [1, 2, 3, 4, 5, 6, 7, 101, 102]
+# 3. 要进行数据清洗的列
 param_list = ['KW', 'V', 'A']
+# 4. 要进行数据清洗的时间段
 time_list = [1612143374285, 1612143453726]
 
 for meter in meter_list:
