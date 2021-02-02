@@ -14,11 +14,12 @@ engine = create_engine("mysql+pymysql://{}:{}@{}:{}/{}".format('root', 'root', '
 # 2. 要进行数据清洗的电表号码
 meter_list = [1, 2, 3, 4, 5, 6, 7, 101, 102]
 param_list = ['KW', 'V', 'A']
+time_list = [1612143374285, 1612143453726]
 
 for meter in meter_list:
     source_table_name = 'meter_{}_source'.format(meter)
     target_table_name = 'meter_{}_deal'.format(meter)
-    sql_query = 'select * from {}'.format(source_table_name)
+    sql_query = 'select * from {} where timestamp between {} and {}'.format(source_table_name, time_list[0], time_list[1])
     df_read = pd.read_sql_query(sql_query, engine)
     df_read['time'] = pd.to_datetime(df_read['timestamp'], unit='ms')
     df_read.set_index('time', inplace=True)
@@ -31,6 +32,6 @@ for meter in meter_list:
         df_read[param] = df_read[param].fillna((df_read[param].fillna(method='ffill', limit=1) + df_read[param].fillna(method='bfill', limit=1)) / 2)
     df_read = df_read.fillna(method="backfill", limit=1)
     df_read.dropna(subset=['meter'], inplace=True)
-    df_read.to_sql(target_table_name, con=engine, if_exists='replace', index=False)
+    df_read.to_sql(target_table_name, con=engine, if_exists='append', index=False)
 
 print('success')
