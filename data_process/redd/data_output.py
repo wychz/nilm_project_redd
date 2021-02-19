@@ -6,6 +6,7 @@ from appliance_param import appliance_param
 from appliance_param import multiple_data
 
 
+# 根据电力公司要求产生可视数据
 def generate(appliance_name_list, data_dir, save_path):
     start_time = time.time()
     sample_seconds = 60
@@ -30,7 +31,6 @@ def generate(appliance_name_list, data_dir, save_path):
     cols.insert(0, cols.pop(cols.index('time')))
     train = train.ix[:, cols]
     train = train.round(0)
-
 
     train.to_csv(save_path + 'all' + '_training_.csv', mode='a', index=False, header=True)
 

@@ -4,6 +4,7 @@ import time
 from appliance_param import appliance_param
 
 
+# 训练单个电器 ---- 数据生成
 def generate(appliance_name_list, data_dir, aggregate_mean, aggregate_std, save_path):
     start_time = time.time()
     sample_seconds = 60

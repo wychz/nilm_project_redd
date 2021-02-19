@@ -81,12 +81,12 @@ class Trainer:
         self.plot_training_results(training_history)
 
     def default_train(self, model, callbacks, steps_per_training_epoch):
-        training_history = model.fit(self.__training_chunker.load_dataset(),
+        training_history = model.fit(self.__training_chunker.load_dataset_redd(),
                                      steps_per_epoch=steps_per_training_epoch,
                                      epochs=self.__epochs,
                                      verbose=self.__verbose,
                                      callbacks=callbacks,
-                                     validation_data=self.__validation_chunker.load_dataset(),
+                                     validation_data=self.__validation_chunker.load_dataset_redd(),
                                      validation_freq=self.__validation_frequency,
                                      validation_steps=self.__validation_steps)
         return training_history

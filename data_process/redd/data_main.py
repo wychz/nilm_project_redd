@@ -2,6 +2,8 @@ from data_process.redd import single_data_generate
 from data_process.redd import multiple_data_generate
 from running_param import running_param
 
+
+# 主程序： 指定参数，进行数据生成
 appliance_name_list = running_param['appliance_name_list']
 predict_mode = running_param['predict_mode']
 data_dir = running_param['data_process']['raw_data_dir']
