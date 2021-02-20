@@ -11,7 +11,9 @@ aggregate_mean = running_param['data_process']['aggregate_mean']
 aggregate_std = running_param['data_process']['aggregate_std']
 save_path = running_param['data_process']['save_path'] + predict_mode + "/"
 
-if predict_mode == 'single':
-    single_data_generate.generate(appliance_name_list, data_dir, aggregate_mean, aggregate_std, save_path)
-elif predict_mode == 'multiple' or predict_mode == 'multi_label':
-    multiple_data_generate.generate(appliance_name_list, data_dir, aggregate_mean, aggregate_std, save_path)
+
+def redd_data_process():
+    if predict_mode == 'single':
+        single_data_generate.generate(appliance_name_list, data_dir, aggregate_mean, aggregate_std, save_path)
+    elif predict_mode == 'multiple' or predict_mode == 'multi_label':
+        multiple_data_generate.generate(appliance_name_list, data_dir, aggregate_mean, aggregate_std, save_path)

@@ -70,7 +70,6 @@ class Trainer:
         model = model_select(self.__input_window_length, self.__model_type, self.__appliance_count, self.__predict_mode)
         model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=self.__learning_rate, beta_1=self.__beta_1, beta_2=self.__beta_2),
                       loss=self.__loss, metrics=self.__metrics)
-        plot_model(model, to_file='model.png')
         early_stopping = tf.keras.callbacks.EarlyStopping(monitor="val_loss", min_delta=self.__min_delta,
                                                           patience=self.__patience, verbose=self.__verbose, mode="auto")
         callbacks = [early_stopping]

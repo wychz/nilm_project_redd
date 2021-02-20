@@ -12,9 +12,17 @@ aggregate_std = running_param['data_process']['aggregate_std']
 save_path = running_param['data_process']['save_path'] + predict_mode + "/"
 main_meter = running_param['data_process']['main_meter']
 
-engine = create_engine("mysql+pymysql://{}:{}@{}:{}/{}".format('root', 'root', 'localhost', '3306', 'energy'))
+username = running_param['database']['username']
+password = running_param['database']['password']
+host = running_param['database']['host']
+port = running_param['database']['port']
+db = running_param['database']['db']
 
-if predict_mode == 'single':
-    single_data_generate.generate(appliance_name_list, main_meter, aggregate_mean, aggregate_std, save_path, engine)
-elif predict_mode == 'multiple' or predict_mode == 'multi_label':
-    multiple_data_generate.generate(appliance_name_list, main_meter, aggregate_mean, aggregate_std, save_path, engine)
+engine = create_engine("mysql+pymysql://{}:{}@{}:{}/{}".format(username, password, host, port, db))
+
+
+def database_data_process():
+    if predict_mode == 'single':
+        single_data_generate.generate(appliance_name_list, main_meter, aggregate_mean, aggregate_std, save_path, engine)
+    elif predict_mode == 'multiple' or predict_mode == 'multi_label':
+        multiple_data_generate.generate(appliance_name_list, main_meter, aggregate_mean, aggregate_std, save_path, engine)
