@@ -29,16 +29,12 @@ class TrainSlidingWindowGenerator:
         self.__total_num_samples = value
 
     def check_if_chunking(self):
-        print("Importing training file...")
         chunks = pd.read_csv(self.__file_name, header=0, nrows=self.__crop, skiprows=self.__skip_rows)
-        print("Counting number of rows...")
         self.total_size = len(chunks)
         del chunks
-        print("Done.")
         print("The dataset contains ", self.total_size, " rows")
         if self.total_size > self.__ram_threshold:
-            print("There is too much data to load into memory, so it will be loaded in chunks. Please note that this "
-                  "may result in decreased training times.")
+            print("There is too much data to load into memory, so it will be loaded in chunks.")
 
     def load_dataset_redd(self):
         if self.total_size == 0:

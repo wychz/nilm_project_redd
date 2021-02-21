@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 from appliance_param import appliance_param, mains_data
 from test_model.metrics import recall_precision_accuracy_f1, relative_error_total_energy, mean_absolute_error
-from test_model.test_window_generator import TestSlidingWindowGenerator
+from test_model.test_data import TestSlidingWindowGenerator
 from train_model.model import load_model
 
 

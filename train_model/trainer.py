@@ -3,8 +3,7 @@ import numpy as np
 import tensorflow as tf
 
 from train_model.model import model_select, save_model
-from train_model.train_window_generator import TrainSlidingWindowGenerator
-from keras.utils import plot_model
+from train_model.train_data import TrainSlidingWindowGenerator
 
 
 class Trainer:

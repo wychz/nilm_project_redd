@@ -2,20 +2,6 @@ import numpy as np
 
 
 def get_TP(target, prediction, threshold):
-    '''
-    compute the  number of true positive
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
-    # assert (target.shape == prediction.shape)
-
-    # target = 1 - np.clip(target, threshold, 0) / threshold
-    # prediction = 1 - np.clip(prediction, threshold, 0) / threshold
-
     target = 1 - np.clip(target, 0, threshold) / threshold
     prediction = 1 - np.clip(prediction, 0, threshold) / threshold
 
@@ -26,20 +12,6 @@ def get_TP(target, prediction, threshold):
 
 
 def get_FP(target, prediction, threshold):
-    '''
-    compute the  number of false positive
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
-    # assert (target.shape == prediction.shape)
-
-    # target = np.clip(target, threshold, 0) / threshold
-    # prediction = 1 - np.clip(prediction, threshold, 0) / threshold
-
     target = 1 - np.clip(target, 0, threshold) / threshold
     prediction = 1 - np.clip(prediction, 0, threshold) / threshold
 
@@ -50,20 +22,6 @@ def get_FP(target, prediction, threshold):
 
 
 def get_FN(target, prediction, threshold):
-    '''
-    compute the  number of false negtive
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
-    # assert (target.shape == prediction.shape)
-
-    # target = 1 - np.clip(target, threshold, 0) / threshold
-    # prediction = np.clip(prediction, threshold, 0) / threshold
-
     target = 1 - np.clip(target, 0, threshold) / threshold
     prediction = 1 - np.clip(prediction, 0, threshold) / threshold
 
@@ -74,20 +32,6 @@ def get_FN(target, prediction, threshold):
 
 
 def get_TN(target, prediction, threshold):
-    '''
-    compute the  number of true negative
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
-    # assert (target.shape == prediction.shape)
-
-    # target = np.clip(target, threshold, 0) / threshold
-    # prediction = np.clip(prediction, threshold, 0) / threshold
-
     target = 1 - np.clip(target, 0, threshold) / threshold
     prediction = 1 - np.clip(prediction, 0, threshold) / threshold
 
@@ -98,15 +42,6 @@ def get_TN(target, prediction, threshold):
 
 
 def get_recall(target, prediction, threshold):
-    '''
-    compute the recall rate
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
     tp = get_TP(target, prediction, threshold)
     fn = get_FN(target, prediction, threshold)
     print('tp={0}'.format(tp))
@@ -119,15 +54,6 @@ def get_recall(target, prediction, threshold):
 
 
 def get_precision(target, prediction, threshold):
-    '''
-    compute the  precision rate
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
     tp = get_TP(target, prediction, threshold)
     fp = get_FP(target, prediction, threshold)
     print('tp={0}'.format(tp))
@@ -140,15 +66,6 @@ def get_precision(target, prediction, threshold):
 
 
 def get_F1(target, prediction, threshold):
-    '''
-    compute the  F1 score
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
     recall = get_recall(target, prediction, threshold)
     print(recall)
     precision = get_precision(target, prediction, threshold)
@@ -161,67 +78,25 @@ def get_F1(target, prediction, threshold):
 
 
 def get_accuracy(target, prediction, threshold):
-    '''
-    compute the accuracy rate
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    threshold: float
-    '''
-
     tp = get_TP(target, prediction, threshold)
     tn = get_TN(target, prediction, threshold)
-
     accuracy = (tp + tn) / target.size
-
     return accuracy
 
 
 def get_relative_error(target, prediction):
-    '''
-    compute the  relative_error
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    '''
-
-    # assert (target.shape == prediction.shape)
-
     return np.mean(np.nan_to_num(np.abs(target - prediction) / np.maximum(target, prediction)))
 
 
 def get_abs_error(target, prediction):
-    '''
-    compute the  absolute_error
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    '''
-
-    # assert (target.shape == prediction.shape)
     return np.mean(np.abs(target - prediction))
 
 
 def get_nde(target, prediction):
-    '''
-    compute the  normalized disaggregation error
-    Parameters:
-    ----------------
-    target: the groud truth , np.array
-    prediction: the prediction, np.array
-    '''
     return np.sum((target - prediction) ** 2) / np.sum((target ** 2))
 
 
 def get_sae(target, prediction, sample_second):
-    '''
-    compute the signal aggregate error
-    sae = |\hat(r)-r|/r where r is the ground truth total energy;
-    \hat(r) is the predicted total energy.
-    '''
     r = np.sum(target * sample_second * 1.0 / 3600.0)
     rhat = np.sum(prediction * sample_second * 1.0 / 3600.0)
     return np.abs(r - rhat) / np.abs(r)
@@ -259,7 +134,6 @@ def relative_error_total_energy(pred, ground):
 
 def mean_absolute_error(pred, ground):
     total_sum = np.sum(np.abs(pred - ground))
-
     return total_sum / len(pred)
 
 
