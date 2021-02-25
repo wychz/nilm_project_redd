@@ -1,109 +1,50 @@
-import logging
-import numpy as np
-import pandas as pd
-import time
 import matplotlib.pyplot as plt
+import numpy as np
 
 from appliance_param import appliance_param, mains_data
 from test_model.metrics import recall_precision_accuracy_f1, relative_error_total_energy, mean_absolute_error
-from test_model.test_data import TestSlidingWindowGenerator
+from test_model.test_generator import TestSlidingWindowGenerator
+from test_model.test_generator_common import TestSlidingWindowGeneratorCommon
 from train_model.model import load_model
 
 
 class Tester:
-    def __init__(self, appliance, crop, batch_size, model_type, predict_mode, appliance_name_list,
+    def __init__(self, appliance, batch_size, model_type, predict_mode, appliance_name_list,
                  test_directory, saved_model_dir, log_file_dir,
                  input_window_length):
         self.__appliance = appliance
         self.__model_type = model_type
         self.__predict_mode = predict_mode
         self.__appliance_name_list = appliance_name_list
-        self.__crop = crop
         self.__batch_size = batch_size
         self._input_window_length = input_window_length
-        self.__window_size = self._input_window_length + 2
-        self.__window_offset = int(0.5 * self.__window_size - 1)
+        self.__window_offset = int(0.5 * (self._input_window_length + 2) - 1)
         self.__number_of_windows = 100
         self.__test_directory = test_directory
         self.__saved_model_dir = saved_model_dir
         self.__log_file = log_file_dir
-        # logging.basicConfig(filename=self.__log_file, level=logging.INFO)
 
     def test_model(self):
-        test_input, test_target = self.load_dataset(self.__test_directory)
         model = load_model(self.__saved_model_dir)
-        test_generator = TestSlidingWindowGenerator(number_of_windows=self.__number_of_windows, inputs=test_input,
-                                                    appliance_name_list=self.__appliance_name_list,
-                                                    targets=test_target, offset=self.__window_offset,
-                                                    predict_mode=self.__predict_mode)
-        steps_per_test_epoch = np.round(int(test_generator.total_size / self.__batch_size), decimals=0)
-        start_time = time.time()
+        if self.__model_type == 'concat':
+            test_generator = TestSlidingWindowGenerator(number_of_windows=self.__number_of_windows,
+                                                        appliance_name_list=self.__appliance_name_list,
+                                                        offset=self.__window_offset,
+                                                        predict_mode=self.__predict_mode,
+                                                        test_directory=self.__test_directory)
+            test_input, test_target = test_generator.generate_dataset_concat()
+        else:
+            test_generator = TestSlidingWindowGeneratorCommon(number_of_windows=self.__number_of_windows,
+                                                              appliance_name_list=self.__appliance_name_list,
+                                                              offset=self.__window_offset,
+                                                              predict_mode=self.__predict_mode,
+                                                              test_directory=self.__test_directory)
+            test_input, test_target = test_generator.generate_test_data()
+        steps_per_test_epoch = np.round(int(test_generator.max_number_of_windows / self.__batch_size), decimals=0)
         testing_history = model.predict(x=test_generator.load_dataset(), steps=steps_per_test_epoch, verbose=2)
-        end_time = time.time()
-        test_time = end_time - start_time
-        evaluation_metrics = model.evaluate(x=test_generator.load_dataset(), steps=steps_per_test_epoch)
-        self.plot_results(model, test_time, evaluation_metrics, testing_history, test_input, test_target)
+        self.plot_results(testing_history, test_input, test_target)
 
-    def load_dataset(self, directory):
-        data_frame = pd.read_csv(directory, nrows=self.__crop, skiprows=0, header=0)
-        test_input = np.round(np.array(data_frame.iloc[:, 0], float), 6)
-        if self.__predict_mode == 'single':
-            test_target = np.round(np.array(data_frame.iloc[self.__window_offset: -self.__window_offset, 1], float), 6)
-            del data_frame
-            return test_input, test_target
-        elif self.__predict_mode == 'multiple' or self.__predict_mode == 'multi_label':
-            test_target = np.round(np.array(data_frame.iloc[self.__window_offset: -self.__window_offset, 1:], float), 6)
-            del data_frame
-            return test_input, test_target
-
-    def log_results(self, model, test_time, evaluation_metrics):
-        inference_log = "Inference Time: " + str(test_time)
-        logging.info(inference_log)
-        metric_string = "MSE: ", str(evaluation_metrics[0]), " MAE: ", str(evaluation_metrics[3])
-        logging.info(metric_string)
-        self.count_pruned_weights(model)
-
-    def count_pruned_weights(self, model):
-        num_total_zeros = 0
-        num_dense_zeros = 0
-        num_dense_weights = 0
-        num_conv_zeros = 0
-        num_conv_weights = 0
-        for layer in model.layers:
-            if np.shape(layer.get_weights())[0] != 0:
-                layer_weights = layer.get_weights()[0].flatten()
-                if "conv" in layer.name:
-                    num_conv_weights += np.size(layer_weights)
-                    num_conv_zeros += np.count_nonzero(layer_weights == 0)
-                    num_total_zeros += np.size(layer_weights)
-                else:
-                    num_dense_weights += np.size(layer_weights)
-                    num_dense_zeros += np.count_nonzero(layer_weights == 0)
-        conv_zeros_string = "CONV. ZEROS: " + str(num_conv_zeros)
-        conv_weights_string = "CONV. WEIGHTS: " + str(num_conv_weights)
-        conv_sparsity_ratio = "CONV. RATIO: " + str(num_conv_zeros / num_conv_weights)
-        dense_weights_string = "DENSE WEIGHTS: " + str(num_dense_weights)
-        dense_zeros_string = "DENSE ZEROS: " + str(num_dense_zeros)
-        dense_sparsity_ratio = "DENSE RATIO: " + str(num_dense_zeros / num_dense_weights)
-        total_zeros_string = "TOTAL ZEROS: " + str(num_total_zeros)
-        total_weights_string = "TOTAL WEIGHTS: " + str(model.count_params())
-        total_sparsity_ratio = "TOTAL RATIO: " + str(num_total_zeros / model.count_params())
-        print("LOGGING PATH: ", self.__log_file)
-        logging.info(conv_zeros_string)
-        logging.info(conv_weights_string)
-        logging.info(conv_sparsity_ratio)
-        logging.info("")
-        logging.info(dense_zeros_string)
-        logging.info(dense_weights_string)
-        logging.info(dense_sparsity_ratio)
-        logging.info("")
-        logging.info(total_zeros_string)
-        logging.info(total_weights_string)
-        logging.info(total_sparsity_ratio)
-
-    def plot_results(self, model, test_time, evaluation_metrics, testing_history, test_input, test_target):
-        # self.log_results(model, test_time, evaluation_metrics)
-
+    def plot_results(self, testing_history, test_input, test_target):
         if self.__predict_mode == 'single':
             mean, std = generate_mean_std(self.__appliance)
             self.plot_results_single(testing_history, test_input, test_target, mean, std)
@@ -138,7 +79,7 @@ class Tester:
         self.print_plots(test_agg, test_target, testing_history, count, appliance_name)
 
     def plot_results_multiple_label(self, testing_history, test_input, test_target, appliance_name):
-        test_agg = test_input.flatten()
+        test_agg = test_input[:, 0].flatten()
         test_agg = test_agg[:testing_history.size]
         rpaf, rete, mae = self.calculate_metrics(testing_history, test_agg, test_target, 0.5)
         print_metrics(appliance_name, rpaf, rete, mae)
@@ -146,7 +87,7 @@ class Tester:
     def testing_data_process(self, testing_history, test_target, test_input, mean, std):
         testing_history = ((testing_history * std) + mean)
         test_target = ((test_target * std) + mean)
-        test_agg = (test_input.flatten() * mains_data["std"]) + mains_data["mean"]
+        test_agg = (test_input[:, 0].flatten() * mains_data["std"]) + mains_data["mean"]
         test_agg = test_agg[:testing_history.size]
         test_target[test_target < 0] = 0
         testing_history[testing_history < 0] = 0

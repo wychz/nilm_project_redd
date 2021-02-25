@@ -1,14 +1,13 @@
 from test_model.tester import Tester
-from running_param import running_param
+import running_param
 
 
-appliance_name_list = running_param['appliance_name_list']
-batch_size = running_param['batch_size']
-crop = running_param['crop']
-model_type = running_param['model_type']
-input_window_length = running_param['input_window_length']
-predict_mode = running_param['predict_mode']
-dataset = running_param['data_process']['dataset']
+appliance_name_list = running_param.appliance_name_list
+batch_size = running_param.batch_size
+model_type = running_param.model_type
+input_window_length = running_param.input_window_length
+predict_mode = running_param.predict_mode
+dataset = running_param.dataset
 
 
 def test_model():
@@ -17,7 +16,7 @@ def test_model():
             test_directory = 'data_process/' + dataset + '/processed_dataset/1min_csv/' + predict_mode + '/' + appliance_name + '_test_.csv'
             saved_model_dir = "saved_models/" + model_type + "_1min/" + predict_mode + "/" + appliance_name + "_" + model_type + "_model.h5"
             log_file_dir = "saved_models/" + model_type + "_1min/" + predict_mode + "/" + appliance_name + "_" + model_type + ".log"
-            tester = Tester(appliance_name, crop, batch_size, model_type, predict_mode, appliance_name_list, test_directory, saved_model_dir,
+            tester = Tester(appliance_name, batch_size, model_type, predict_mode, appliance_name_list, test_directory, saved_model_dir,
                             log_file_dir, input_window_length)
             tester.test_model()
 
@@ -25,6 +24,6 @@ def test_model():
         test_directory = 'data_process/' + dataset + '/processed_dataset/1min_csv/' + predict_mode + '/' + 'all' + '_test_.csv'
         saved_model_dir = "saved_models/" + model_type + "_1min/" + predict_mode + "/" + 'all' + "_" + model_type + "_model.h5"
         log_file_dir = "saved_models/" + model_type + "_1min/" + predict_mode + "/" + 'all' + "_" + model_type + ".log"
-        tester = Tester('all', crop, batch_size, model_type, predict_mode, appliance_name_list, test_directory, saved_model_dir,
+        tester = Tester('all', batch_size, model_type, predict_mode, appliance_name_list, test_directory, saved_model_dir,
                         log_file_dir, input_window_length)
         tester.test_model()

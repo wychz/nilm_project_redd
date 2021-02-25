@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
 from appliance_param import appliance_param
-from running_param import running_param
+import running_param
 
 
 # 将电器功率数据转换为0,1开关状态
-appliance_name_list = running_param['appliance_name_list']
+appliance_name_list = running_param.appliance_name_list
 data_dir = 'data_process/redd/processed_dataset/1min_csv/multiple/'
 save_path = 'data_process/redd/processed_dataset/1min_csv/multi_label/'
 predict_mode = 'multi_label'

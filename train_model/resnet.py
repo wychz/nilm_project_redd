@@ -1,23 +1,17 @@
 from __future__ import print_function
 
 from keras import layers
-from keras.layers import Input
-from keras.layers import Dense
-from keras.layers import Activation
-from keras.layers import Flatten
-from keras.layers import Conv1D
-from keras.layers import MaxPooling1D
-from keras.layers import GlobalMaxPooling1D
-from keras.layers import ZeroPadding1D
-from keras.layers import AveragePooling1D
-from keras.layers import GlobalAveragePooling1D
-from keras.layers import BatchNormalization
-from keras.layers import Dropout
-from keras.layers import AlphaDropout
-from keras.layers import Reshape
-from keras.models import Model
 from keras.engine.topology import get_source_inputs
-import keras.backend as K
+from keras.layers import Activation
+from keras.layers import AveragePooling1D
+from keras.layers import BatchNormalization
+from keras.layers import Conv1D
+from keras.layers import Dense
+from keras.layers import Flatten
+from keras.layers import Input
+from keras.layers import MaxPooling1D
+from keras.layers import ZeroPadding1D
+from keras.models import Model
 
 
 def identity_block(input_tensor, kernel_size, filters, stage, block):

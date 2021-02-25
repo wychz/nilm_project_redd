@@ -24,7 +24,7 @@ def generate(appliance_name_list, data_dir, aggregate_mean, aggregate_std, save_
             normalization(df_align, appliance_name, aggregate_mean, aggregate_std)
 
             if h == appliance_param[appliance_name]['test_build']:
-                df_align.to_csv(save_path + appliance_name + '_test_.csv', mode='a', index=False, header=False)
+                df_align.to_csv(save_path + appliance_name + '_test_.csv', index=False, header=False)
                 print("    Size of test set is {:.4f} M rows.".format(len(df_align) / 10 ** 6))
                 continue
 
@@ -36,10 +36,10 @@ def generate(appliance_name_list, data_dir, aggregate_mean, aggregate_std, save_
         val = train.tail(val_len)
         val.reset_index(drop=True, inplace=True)
         train.drop(train.index[-val_len:], inplace=True)
-        val.to_csv(save_path + appliance_name + '_validation_' + '.csv', mode='a', index=False, header=False)
+        val.to_csv(save_path + appliance_name + '_validation_' + '.csv', index=False, header=False)
 
         # Training CSV
-        train.to_csv(save_path + appliance_name + '_training_.csv', mode='a', index=False, header=False)
+        train.to_csv(save_path + appliance_name + '_training_.csv', index=False, header=False)
 
         print("    Size of total training set is {:.4f} M rows.".format(len(train) / 10 ** 6))
         print("    Size of total validation set is {:.4f} M rows.".format(len(val) / 10 ** 6))

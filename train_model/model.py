@@ -2,6 +2,7 @@ import tensorflow as tf
 import os
 
 from train_model.resnet import Res50NTv1
+from train_model.network.concatenate_net import create_concatenate
 
 tf.random.set_seed(120)
 
@@ -25,7 +26,6 @@ def model_select(input_window_length, model_type, appliance_count, predict_mode)
         output_layer = tf.keras.layers.Dense(appliance_count, activation="linear")(label_layer)
         model = tf.keras.Model(inputs=input_layer, outputs=output_layer)
         return model
-
 
     if model_type == 'lstm':
         input_layer = tf.keras.layers.Input(shape=(input_window_length, 1))
@@ -112,6 +112,10 @@ def model_select(input_window_length, model_type, appliance_count, predict_mode)
         output_layer = tf.keras.layers.Dense(appliance_count, activation="linear")(dropout_layer_6)
         model = tf.keras.Model(inputs=input_layer, outputs=output_layer)
         return model
+
+    if model_type == 'concat':
+        return create_concatenate(input_window_length, appliance_count, predict_mode)
+
 
 def save_model(model, save_model_dir):
     model_path = save_model_dir
