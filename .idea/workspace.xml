@@ -2,66 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a62e43c-097e-454e-92c7-f341a3137cac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_process/generate_society.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_process/society_normalize.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_model/test_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_model/network/concatenate_net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_model/train_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_model/train_generator_common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/data_main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/data_to_label.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/multiple_data_generate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/multi_label/all_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/multi_label/all_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/multi_label/all_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/multiple/all_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/multiple/all_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/multiple/all_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/single/489190910751_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/single/489190910751_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/single/489190910751_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/single/70213_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/single/70213_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/processed_dataset/1min_csv/single/70213_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/database/single_data_generate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/data_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/redd/data_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/data_to_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/redd/data_to_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/multiple_data_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/redd/multiple_data_generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/multi_label/all_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/multi_label/all_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/multi_label/all_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/multiple/all_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/multiple/all_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/multiple/all_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/dishwasher_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/dishwasher_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/dishwasher_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/fridge_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/fridge_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/fridge_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/microwave_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/microwave_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/microwave_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/washingmachine_test_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/washingmachine_training_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/processed_dataset/1min_csv/single/washingmachine_validation_.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/redd/single_data_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/redd/single_data_generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrance.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/running_param.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/concat_1min/single/dishwasher_concat_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/concat_1min/single/dishwasher_concat_model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/concat_1min/single/fridge_concat_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/concat_1min/single/fridge_concat_model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/concat_1min/single/microwave_concat_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/concat_1min/single/microwave_concat_model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/concat_1min/single/washingmachine_concat_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/concat_1min/single/washingmachine_concat_model.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saved_models/lstm_1min/single/dishwasher_lstm_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/lstm_1min/single/dishwasher_lstm_model.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saved_models/lstm_1min/single/fridge_lstm_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/lstm_1min/single/fridge_lstm_model.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saved_models/lstm_1min/single/microwave_lstm_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/lstm_1min/single/microwave_lstm_model.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saved_models/lstm_1min/single/washingmachine_lstm_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/lstm_1min/single/washingmachine_lstm_model.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_model/test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_model/test_generator_common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_model/test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_model/test_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_model/test_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_model/test_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_model/test_generator_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_model/test_generator_common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_model/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_model/tester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model/resnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model/resnet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model/train_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model/train_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model/train_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model/trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_model/train_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model/train_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_model/train_generator_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model/train_generator_common.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/train_model/network" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -302,7 +257,10 @@
       <workItem from="1613999868673" duration="2101000" />
       <workItem from="1614081507541" duration="43000" />
       <workItem from="1614161408395" duration="6718000" />
-      <workItem from="1614266204151" duration="325000" />
+      <workItem from="1614266204151" duration="860000" />
+      <workItem from="1614512922374" duration="10000" />
+      <workItem from="1614520964528" duration="8000" />
+      <workItem from="1614700874394" duration="1621000" />
     </task>
     <servers />
   </component>
@@ -328,69 +286,70 @@
     </state>
     <state x="1059" y="442" key="FileChooserDialogImpl/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1610454332642" />
     <state x="1059" y="442" key="FileChooserDialogImpl/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614081548870" />
-    <state width="2517" height="399" key="GridCell.Tab.0.bottom" timestamp="1614168695173">
+    <state width="2517" height="399" key="GridCell.Tab.0.bottom" timestamp="1614702205286">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="477" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590366" />
-    <state width="2517" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695173" />
+    <state width="2517" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614702205286" />
     <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state width="2517" height="399" key="GridCell.Tab.0.center" timestamp="1614168695173">
+    <state width="2517" height="399" key="GridCell.Tab.0.center" timestamp="1614702205285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="477" key="GridCell.Tab.0.center/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590365" />
-    <state width="2517" height="399" key="GridCell.Tab.0.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695173" />
+    <state width="2517" height="399" key="GridCell.Tab.0.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614702205285" />
     <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state width="2517" height="399" key="GridCell.Tab.0.left" timestamp="1614168695173">
+    <state width="2517" height="399" key="GridCell.Tab.0.left" timestamp="1614702205285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="477" key="GridCell.Tab.0.left/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590365" />
-    <state width="2517" height="399" key="GridCell.Tab.0.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695173" />
+    <state width="2517" height="399" key="GridCell.Tab.0.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614702205285" />
     <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state width="2517" height="399" key="GridCell.Tab.0.right" timestamp="1614168695173">
+    <state width="2517" height="399" key="GridCell.Tab.0.right" timestamp="1614702205286">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="477" key="GridCell.Tab.0.right/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609492590365" />
-    <state width="2517" height="399" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695173" />
+    <state width="2517" height="399" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614702205286" />
     <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state width="2517" height="397" key="GridCell.Tab.1.bottom" timestamp="1614168695171">
+    <state width="2517" height="397" key="GridCell.Tab.1.bottom" timestamp="1614701740471">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="397" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
-    <state width="2517" height="397" key="GridCell.Tab.1.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695171" />
+    <state width="2517" height="397" key="GridCell.Tab.1.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614701740471" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state width="2517" height="397" key="GridCell.Tab.1.center" timestamp="1614168695171">
+    <state width="2517" height="397" key="GridCell.Tab.1.center" timestamp="1614701740471">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="397" key="GridCell.Tab.1.center/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
-    <state width="2517" height="397" key="GridCell.Tab.1.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695171" />
+    <state width="2517" height="397" key="GridCell.Tab.1.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614701740471" />
     <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state width="2517" height="397" key="GridCell.Tab.1.left" timestamp="1614168695170">
+    <state width="2517" height="397" key="GridCell.Tab.1.left" timestamp="1614701740471">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="397" key="GridCell.Tab.1.left/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
-    <state width="2517" height="397" key="GridCell.Tab.1.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695170" />
+    <state width="2517" height="397" key="GridCell.Tab.1.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614701740471" />
     <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state width="2517" height="397" key="GridCell.Tab.1.right" timestamp="1614168695171">
+    <state width="2517" height="397" key="GridCell.Tab.1.right" timestamp="1614701740471">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="397" key="GridCell.Tab.1.right/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1608929009880" />
-    <state width="2517" height="397" key="GridCell.Tab.1.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614168695171" />
+    <state width="2517" height="397" key="GridCell.Tab.1.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614701740471" />
     <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1607790550959" />
-    <state x="781" y="342" key="SettingsEditor" timestamp="1609488812730">
+    <state x="781" y="342" key="SettingsEditor" timestamp="1614700881415">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="342" key="SettingsEditor/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1609488812730" />
+    <state x="781" y="342" key="SettingsEditor/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614700881415" />
     <state width="1288" height="708" key="XDebugger.FullValuePopup" timestamp="1613750191062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1288" height="708" key="XDebugger.FullValuePopup/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1613750191062" />
     <state width="1288" height="708" key="XDebugger.FullValuePopup/0.0.2560.1400@0.0.2560.1400" timestamp="1607781541934" />
-    <state x="960" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1614266204563">
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1614520964818">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-1440.-568.1440.2520@0.0.2560.1400" timestamp="1610454207619" />
     <state x="-1600" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@-2560.0.2560.1400" timestamp="1614081528260" />
-    <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614266204563" />
+    <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1614520964818" />
     <state x="960" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1607775788735" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1613830270485">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -443,7 +402,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/data_process/generate_society.py</url>
-          <line>20</line>
+          <line>22</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -453,7 +412,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/data_process/society_normalize.py</url>
-          <line>22</line>
+          <line>21</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -470,6 +429,11 @@
           <url>file://$PROJECT_DIR$/train_model/train_generator_common.py</url>
           <line>24</line>
           <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_model/test_generator.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -497,6 +461,7 @@
     <SUITE FILE_PATH="coverage/nilm$test.coverage" NAME="test Coverage Results" MODIFIED="1613831187141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_model" />
     <SUITE FILE_PATH="coverage/nilm$database_connect_3.coverage" NAME="database_connect_3 Coverage Results" MODIFIED="1612026515171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
     <SUITE FILE_PATH="coverage/nilm$train_main.coverage" NAME="train_main Coverage Results" MODIFIED="1613752033939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/train_model" />
+    <SUITE FILE_PATH="coverage/nilm_redd$entrance.coverage" NAME="entrance Coverage Results" MODIFIED="1614702205278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/nilm$picckletest.coverage" NAME="picckletest Coverage Results" MODIFIED="1607781524975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/nilm$single_data_generate.coverage" NAME="single_data_generate Coverage Results" MODIFIED="1613748696766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_process/database" />
     <SUITE FILE_PATH="coverage/nilm$meter_test.coverage" NAME="meter_test Coverage Results" MODIFIED="1613739938860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database/data_read" />

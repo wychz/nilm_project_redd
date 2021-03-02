@@ -22,6 +22,10 @@ class Tester:
         self.__number_of_windows = 100
         self.__test_directory = test_directory
         self.__saved_model_dir = saved_model_dir
+        if self.__predict_mode == 'single':
+            self.__appliance_count = 1
+        else:
+            self.__appliance_count = len(appliance_name_list)
         self.__log_file = log_file_dir
 
     def test_model(self):
@@ -31,14 +35,16 @@ class Tester:
                                                         appliance_name_list=self.__appliance_name_list,
                                                         offset=self.__window_offset,
                                                         predict_mode=self.__predict_mode,
-                                                        test_directory=self.__test_directory)
+                                                        test_directory=self.__test_directory,
+                                                        appliance_count=self.__appliance_count)
             test_input, test_target = test_generator.generate_dataset_concat()
         else:
             test_generator = TestSlidingWindowGeneratorCommon(number_of_windows=self.__number_of_windows,
                                                               appliance_name_list=self.__appliance_name_list,
                                                               offset=self.__window_offset,
                                                               predict_mode=self.__predict_mode,
-                                                              test_directory=self.__test_directory)
+                                                              test_directory=self.__test_directory,
+                                                              appliance_count=self.__appliance_count)
             test_input, test_target = test_generator.generate_test_data()
         steps_per_test_epoch = np.round(int(test_generator.max_number_of_windows / self.__batch_size), decimals=0)
         testing_history = model.predict(x=test_generator.load_dataset(), steps=steps_per_test_epoch, verbose=2)

@@ -43,10 +43,7 @@ class TrainSlidingWindowGenerator:
                     output_data_temp = outputs[index + self.__offset]
                     output_data_list.append(output_data_temp)
                 output_data = np.array(output_data_list)
-                if self.__predict_mode == 'single':
-                    output_data = output_data.reshape(-1, 1)
-                elif self.__predict_mode == 'multiple' or self.__predict_mode == 'multi_label':
-                    output_data = output_data.reshape(-1, self.__appliance_count)
+                output_data = output_data.reshape(-1, self.__appliance_count)
                 # 产生数据
                 yield input_all, output_data
 

@@ -3,7 +3,7 @@ import pandas as pd
 
 
 class TestSlidingWindowGeneratorCommon(object):
-    def __init__(self, number_of_windows, offset, predict_mode, appliance_name_list, test_directory):
+    def __init__(self, number_of_windows, offset, predict_mode, appliance_name_list, test_directory, appliance_count):
         self.__number_of_windows = number_of_windows
         self.__offset = offset
         self.__test_directory = test_directory
@@ -13,6 +13,7 @@ class TestSlidingWindowGeneratorCommon(object):
         self.total_size = len(self.data_array)
         self.window_size = 2 * offset + 1
         self.max_number_of_windows = self.total_size - 2 * self.__offset
+        self.__appliance_count = appliance_count
 
     def load_dataset(self):
         inputs, outputs = self.generate_test_data()
@@ -31,23 +32,13 @@ class TestSlidingWindowGeneratorCommon(object):
                 output_data_temp = outputs[index + self.__offset]
                 output_data_list.append(output_data_temp)
             target_data = np.array(output_data_list)
-            if self.__predict_mode == 'single':
-                target_data = target_data.reshape(-1, 1)
-            elif self.__predict_mode == 'multiple' or self.__predict_mode == 'multi_label':
-                target_data = target_data.reshape(-1, len(self.__appliance_name_list))
+            target_data = target_data.reshape(-1, self.__appliance_count)
             yield input_data, target_data
 
     def generate_test_data(self):
         data_array = self.data_array
-        if self.__predict_mode == 'single':
-            inputs = data_array[:, 0]
-            inputs = np.reshape(inputs, (-1, 1))
-            outputs = data_array[self.__offset: -self.__offset, -1]
-            outputs = np.reshape(outputs, (-1, 1))
-            return inputs, outputs
-        elif self.__predict_mode == 'multiple' or self.__predict_mode == 'multi_label':
-            inputs = data_array[:, 0]
-            inputs = np.reshape(inputs, (-1, 1))
-            outputs = data_array[self.__offset: -self.__offset, -len(self.__appliance_name_list):]
-            outputs = np.reshape(outputs, (-1, len(self.__appliance_name_list)))
-            return inputs, outputs
+        inputs = data_array[:, 0]
+        inputs = np.reshape(inputs, (-1, 1))
+        outputs = data_array[self.__offset: -self.__offset, -self.__appliance_count:]
+        outputs = np.reshape(outputs, (-1, self.__appliance_count))
+        return inputs, outputs

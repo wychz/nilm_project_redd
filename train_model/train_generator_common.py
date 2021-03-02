@@ -29,12 +29,8 @@ class TrainSlidingWindowGeneratorCommon:
             for start_index in range(0, self.maximum_batch_size, self.__batch_size):
                 splice = indices[start_index: start_index + self.__batch_size]
                 input_data = np.array([inputs[index: index + 2 * self.__offset + 1] for index in splice])
-                if self.__predict_mode == 'single':
-                    output_data = outputs[splice + self.__offset].reshape(-1, 1)
-                    yield input_data, output_data
-                elif self.__predict_mode == 'multiple' or self.__predict_mode == 'multi_label':
-                    output_data = outputs[splice + self.__offset].reshape(-1, self.__appliance_count)
-                    yield input_data, output_data
+                output_data = outputs[splice + self.__offset].reshape(-1, self.__appliance_count)
+                yield input_data, output_data
 
     def generate_train_data(self, data_array):
         inputs = data_array[:, 0]
