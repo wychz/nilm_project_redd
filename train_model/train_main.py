@@ -11,6 +11,7 @@ input_window_length = running_param.input_window_length
 validation_frequency = running_param.validation_frequency
 dataset = running_param.dataset
 learning_rate = running_param.learning_rate
+is_load_model = running_param.is_load_model
 
 
 def train_model():
@@ -24,7 +25,7 @@ def train_model():
                               training_directory, validation_directory,
                               save_model_dir, predict_mode, len(appliance_name_list),
                               epochs=epochs, input_window_length=input_window_length,
-                              validation_frequency=validation_frequency, learning_rate=learning_rate)
+                              validation_frequency=validation_frequency, learning_rate=learning_rate, is_load_model=is_load_model)
             trainer.train_model()
 
     elif predict_mode == 'multiple' or predict_mode == 'multi_label':
@@ -36,5 +37,5 @@ def train_model():
                           training_directory, validation_directory,
                           save_model_dir, predict_mode, len(appliance_name_list),
                           epochs=epochs, input_window_length=input_window_length,
-                          validation_frequency=validation_frequency, learning_rate=learning_rate)
+                          validation_frequency=validation_frequency, learning_rate=learning_rate, is_load_model=is_load_model)
         trainer.train_model()

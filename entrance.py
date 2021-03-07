@@ -13,7 +13,7 @@ parser.add_argument("--step", type=remove_space, default="train", help="The name
 arguments = parser.parse_args()
 
 # mode = arguments.step
-mode = 'test'
+mode = 'train'
 
 
 if mode == 'train':
